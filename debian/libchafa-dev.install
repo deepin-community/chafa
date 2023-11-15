@@ -1,0 +1,5 @@
+usr/include/chafa
+usr/lib/*/chafa/include/*.h
+usr/lib/*/libchafa.a
+usr/lib/*/libchafa.so
+usr/lib/*/pkgconfig/chafa.pc

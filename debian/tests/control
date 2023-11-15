@@ -1,0 +1,2 @@
+Test-Command: chafa --version
+Restrictions: allow-stderr, superficial

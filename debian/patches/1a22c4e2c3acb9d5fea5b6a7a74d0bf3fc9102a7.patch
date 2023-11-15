@@ -1,0 +1,23 @@
+From 1a22c4e2c3acb9d5fea5b6a7a74d0bf3fc9102a7 Mon Sep 17 00:00:00 2001
+From: Hans Petter Jansson <hpj@hpjansson.org>
+Date: Wed, 26 Jul 2023 20:26:50 +0200
+Subject: [PATCH] build: Force link with libwebp to get WebPGetInfo
+
+Fixes #152 (GitHub).
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 0c21cda..966d6ae 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -150,7 +150,7 @@ AS_IF([test "$with_tools" != no], [
+     ,
+     with_webp=yes)
+   AS_IF([test "$with_webp" != no], [
+-    PKG_CHECK_MODULES(WEBP, [libwebpdemux],,
++    PKG_CHECK_MODULES(WEBP, [libwebp libwebpdemux],,
+       missing_rpms="$missing_rpms libwebp-devel"
+       missing_debs="$missing_debs libwebp-dev"
+       with_webp=no)])
