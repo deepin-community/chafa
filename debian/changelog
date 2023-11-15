@@ -1,5 +1,205 @@
-template-repository (1.0-1) unstable; urgency=medium
+chafa (1.12.5-3) unstable; urgency=medium
 
-  * Initial release
+  * Cherry pick webp fix from upstream. (Closes: #1052756)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Mo Zhou <lumin@debian.org>  Sat, 30 Sep 2023 14:17:46 -0400
+
+chafa (1.12.5-2) unstable; urgency=medium
+
+  * Revise clean target to fix twice in a row FTBFS.
+    (Closes: #1043894, #1049589)
+
+ -- Mo Zhou <lumin@debian.org>  Fri, 01 Sep 2023 22:09:56 -0400
+
+chafa (1.12.5-1) unstable; urgency=medium
+
+  * New upstream version 1.12.5
+
+ -- Mo Zhou <lumin@debian.org>  Fri, 16 Jun 2023 23:57:14 -0400
+
+chafa (1.12.4-1) unstable; urgency=medium
+
+  * New upstream version 1.12.4 (Nov 2022)
+
+ -- Mo Zhou <lumin@debian.org>  Sat, 12 Nov 2022 19:28:36 -0500
+
+chafa (1.12.3-1) unstable; urgency=medium
+
+  * New upstream version 1.12.3 (June 30 2022)
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 30 Jun 2022 17:13:42 -0700
+
+chafa (1.12.1-1) unstable; urgency=medium
+
+  * New upstream version 1.12.1 (Fixes CVE-2022-2061)
+
+ -- Mo Zhou <lumin@debian.org>  Sun, 19 Jun 2022 16:23:41 -0700
+
+chafa (1.12.0-1) unstable; urgency=medium
+
+  * New upstream version 1.12.0
+  * Add new B-D libwebp-dev.
+  * Apply wrap-and-sort.
+  * Run upstream testing program via make check.
+  * Refresh symbols control file.
+
+ -- Mo Zhou <lumin@debian.org>  Sun, 05 Jun 2022 19:15:15 -0700
+
+chafa (1.10.3-1) unstable; urgency=medium
+
+  * New upstream version 1.10.3
+
+ -- Mo Zhou <lumin@debian.org>  Wed, 04 May 2022 10:40:03 -0400
+
+chafa (1.10.2-1) unstable; urgency=medium
+
+  * New upstream version 1.10.2
+
+ -- Mo Zhou <lumin@debian.org>  Mon, 25 Apr 2022 00:35:24 -0400
+
+chafa (1.10.1-1) unstable; urgency=medium
+
+  * New upstream version 1.10.1
+
+ -- Mo Zhou <lumin@debian.org>  Sun, 03 Apr 2022 19:39:40 -0400
+
+chafa (1.10.0-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.6.0, no changes needed.
+  * Avoid explicitly specifying -Wl,--as-needed linker flag.
+
+  [ Mo Zhou ]
+  * New upstream version 1.10.0
+  * Update copyright with cme update dpkg-copyright.
+  * Refresh symbols control file with additions.
+
+ -- Mo Zhou <lumin@debian.org>  Sun, 20 Mar 2022 21:58:27 -0400
+
+chafa (1.8.0-1) unstable; urgency=medium
+
+  [ Boyuan Yang ]
+  * Manually create m4 directory prior to configure to fix FTBFS
+    with autoconf 2.70+. (Closes: #978781)
+
+  [ Mo Zhou ]
+  * New upstream version 1.8.0
+
+ -- Mo Zhou <lumin@debian.org>  Sun, 05 Sep 2021 16:22:16 -0400
+
+chafa (1.6.0-1) unstable; urgency=medium
+
+  * New upstream version 1.6.0
+  * Refresh symbols control file.
+
+ -- Mo Zhou <lumin@debian.org>  Fri, 15 Jan 2021 11:03:13 +0800
+
+chafa (1.4.1-2) unstable; urgency=medium
+
+  * Mark autopkgtest as superficial. (Closes: #969809)
+  * Bump debhelper compat level to 13.
+  * Remove dh_missing override as it defaults to --fail-missing since compat 13.
+  * Specify Build-Depends-Package: libchafa-dev in the symbols control file.
+
+ -- Mo Zhou <lumin@debian.org>  Tue, 15 Sep 2020 19:03:33 +0800
+
+chafa (1.4.1-1) unstable; urgency=medium
+
+  * New upstream version 1.4.1
+  * Remove the merged rpath.patch.
+
+ -- Mo Zhou <lumin@debian.org>  Sat, 11 Apr 2020 09:21:02 +0800
+
+chafa (1.4.0-1) unstable; urgency=medium
+
+  * New upstream version 1.4.0
+  * Change dh_missing behavior to fail-missing.
+  * Update symbols control file: new ABI, no breaking change.
+  * Install the auto-generated config header to the -dev package.
+  * Patch autoconf files, allowing us to disable the RPATH option.
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 09 Apr 2020 12:11:55 +0800
+
+chafa (1.2.2-1) unstable; urgency=medium
+
+  * New upstream version 1.2.2
+  * Refresh symbols control file.
+  * Update my own mail address in d/copyright and d/control.
+  * Specify Rules-Requires-Root: no.
+  * Bump Standards-Version to 4.5.0 (no change).
+
+ -- Mo Zhou <lumin@debian.org>  Sat, 14 Mar 2020 10:49:19 +0800
+
+chafa (1.2.1-1) unstable; urgency=medium
+
+  * New upstream version 1.2.1
+
+ -- Mo Zhou <cdluminate@gmail.com>  Thu, 15 Aug 2019 15:22:15 +0000
+
+chafa (1.2.0-1) unstable; urgency=medium
+
+  * New upstream version 1.2.0
+  * Refresh symbols control file.
+  * Update copyright for libnsgif.
+  * Bump Standards-Version to 4.4.0 (no change).
+  * Override dh_missing to list missing files and omit the .la file.
+  * B-D on debhelper-compat (= 12) and remove d/compat.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Thu, 08 Aug 2019 02:48:01 +0000
+
+chafa (1.0.1-2) unstable; urgency=medium
+
+  * B-D on libmagickwand-dev instead of libmagickwand-6.q16-dev
+
+ -- Mo Zhou <cdluminate@gmail.com>  Sat, 29 Dec 2018 15:11:10 +0000
+
+chafa (1.0.1-1) unstable; urgency=medium
+
+  * New upstream version 1.0.1
+  * Remove the unused CHAFA_REG_BIT32 definition from rules.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Wed, 19 Dec 2018 04:31:55 +0000
+
+chafa (0.9.0+git20180912.225f21f-1) unstable; urgency=medium
+
+  * New upstream snapshot 0.9.0+git20180912.225f21f
+  * Transfer packaging repo to Salsa/Debian.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Fri, 14 Sep 2018 06:39:51 +0000
+
+chafa (0.9.0+git20180820.609f4c5-1) unstable; urgency=medium
+
+  * New upstream snapshot 0.9.0+git20180820.609f4c5
+  * Autopkgtest: Allow output to stderr.
+  * Build-Depends on libmagickwand-6.q16-dev instead of libmagick++-dev.
+  * Update symbols file, introducing 2 new symbols.
+  * Remove all patches (Merged by upstream).
+    - 0001-chafa-Return-TRUE-0-after-print_version.patch
+    - port-i386.patch
+  * Bump Standards-Version to 4.2.1 (no change).
+
+ -- Mo Zhou <cdluminate@gmail.com>  Mon, 27 Aug 2018 16:46:04 +0000
+
+chafa (0.9.0+git20180731.5ddfe4c-3) unstable; urgency=medium
+
+  * Package libchafa-dev should Depend on libchafa0 . (Closes: #906190)
+  * Cherry-pick patch from upstream-git: Make chafa --version return 0.
+    (+ patches/0001-chafa-Return-TRUE-0-after-print_version.patch)
+  * Update autopkgtest control file to avoid test failure.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Wed, 15 Aug 2018 13:08:23 +0000
+
+chafa (0.9.0+git20180731.5ddfe4c-2) unstable; urgency=medium
+
+  * Port Chafa to *-i386 architectures. (+ port-i386.patch)
+  * Add -DCHAFA_REG_BIT32 to CFLAGS when building on *-i386 .
+
+ -- Mo Zhou <cdluminate@gmail.com>  Sun, 12 Aug 2018 14:06:43 +0000
+
+chafa (0.9.0+git20180731.5ddfe4c-1) unstable; urgency=low
+
+  * Initial release. (Closes: #905882)
+
+ -- Mo Zhou <cdluminate@gmail.com>  Sat, 11 Aug 2018 06:15:52 +0000

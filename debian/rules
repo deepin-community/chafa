@@ -1,4 +1,24 @@
 #!/usr/bin/make -f
 
+export DEB_BUILD_MAINT_OPTIONS  = hardening=+all
+
 %:
 	dh $@
+
+override_dh_autoreconf:
+	touch gtk-doc.make
+	echo "EXTRA_DIST =" >> gtk-doc.make
+	echo "CLEANFILES =" >> gtk-doc.make
+	mkdir m4 # needed by autoconf 2.70+
+	gtkdocize
+	dh_autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-rpath=no
+
+override_dh_auto_test:
+	$(MAKE) check
+
+override_dh_auto_clean:
+	dh_auto_clean
+	-$(RM) -rf m4
